@@ -1,0 +1,71 @@
+<!--"StAuth10244: I Dhruvisha Patel, 000837889 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else."-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    <!--Adding bootstrap library-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+        <!--links for all data js files-->
+    <script src="arenas.js" defer></script>
+    <script src="placeofworship.js" defer></script>
+    <script src="waterfalls.js" defer></script>
+    <!--link for my main logic js file-->
+    <script src="main.js" defer></script>
+    <!--CSS style for the page-->
+    <style>
+        h2 {
+            color: aliceblue;
+            background-color: orange;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--buttons for every markers to sort according to there categories-->
+        <div class="btn">
+            <button id="AllMarkers" class="btn btn-success">Show All</button>
+            <button id="Arenas" class="btn btn-warning">Arenas</button>
+            <button id="worship" class="btn btn-info">PlaceofWorship</button>
+            <button id="Waterfalls" class="btn btn-danger">Waterfalls</button>
+
+        </div>
+    </div>
+    <!--Main buttons for user current location that is geolocation and the destination location that is geocode button-->
+    <input type="text" id="address" placeholder="Enter an address">
+    <button id="geocodebutton" class="btn btn-dark">Geocode</button>
+    <button id="geolocation" class="btn btn-dark">My Location</button>
+
+    <!--purpose of webpage according to particular user-->
+    <h2>Hamilton Explorer - Discover Arenas, Places of Worship, and Waterfalls</h2>
+    <p>This application is designed for tourists and residents of Hamilton, Ontario, who want to explore various points
+        of interest in the city.</p>
+        <!--adjusting map css-->
+    <div class="row">
+        <div id="map" class="col-12" style="height: 400px"></div>
+    </div>
+    </div>
+    <!--API script-->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2XCY3Qx-xTdIehQbOkhPMzE1wrmHwUHU&callback=initMap"></script>
+
+</body>
+
+</html>
